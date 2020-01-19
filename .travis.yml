@@ -2,111 +2,122 @@ git:
   depth: 3
 env:
   global:
-  - secure: "YEssttXkPhcgn/5uC8VmWPd96nFy0Ke3w8YzwoRTcEUpFsx2GtK9NAC90w1+h/LyGOBQo2QhV8Ao9uivYkXK5NhAUaiHIXAsrEO1nhTwsl0rHM9NjkVI8KjhqAY72BtQEoAPqb01I8mwvl9PYW4fNzU9M4k/rX+Sc6a/V68DNHiISkWafXyS6xcKlurbCMuBbdVjOc63vgCOrNG8e84HvSGb6L/8ovTTdl4qMrWFdEZ+Pd9sg0lzIpvSYyoLfmdo4NoJXk6mhHCtFKDDHJkUdZzNdhCgfEO731Ii3OpRhtkdjfHthDu+V+fCFKIzbxsQyh979JRLY4yGdDaftoju1E4r2/A2CMO3I744WqEPYhMcYcbX5iVotn3TjGDFNGpdptu5X2BLXBvbW0/De/gY67Pb0tsjb6wWhbZjVttB9h8Sa7COx9cT8AUie08C24sK462Yk9FHo6X3gVNqn0tnIVtU1RDhDoFhUkljkRJq/S/DXxeZ/pBcgVz3En7zvwMJxydHLjPHSpl3GiBs4xT3KpAjg9XdudjkuKnx+OBm2hbRPM6XX8bcwcYZtsG46lp5Qpy9f0UcnB12xFDxgs5miJnF/7/UEia9cA0d7Rt7e3FNRcVFHINOGVYcwCsUC14dVmD2gNxOhZptgh5zbTmueVF11VhXt7RioWis/l3y9ZE="
-  - secure: "YfSrWvyqRALkghXx4y+rGGkpLpGyeQPz4/1soErO0YceiCDwokcqAyyWR+xcIEoQBeBG+LHK/1/FK5lHv1MRc/3j2mu8fQ189xV1UOBorSo3tSP4e1PO1GwnfOXksnh+Lz/8ozYmnYe9oiFyurq17J6eVDkeno6/oUD2TYbiGrlg57eqhd/U6LuJw5cXryTOrrjymkCQX1ooQKFNzNu0f/rUTu+y71z8lLYqmMRuA33S5Fjsq9r4ouCdIeTbpAPh3Xl++TCy8phAYYvcXgvgh+nK8khlS5tXkCWbNtnRVZccQOq3enPjQ3i+8otsSfGePoUWnBV+LSgSAI2msoDdrtNwZ6TSg/UyQEB4B76ENmStK1cnT3d2+N2d8ILkZ+eiwhv/lDCWXrB8h5Cm6DDDap36TLKVeJBPfxzq+FFdwODfBtP8spT7OVmqJcVXtpHa2DS3qtYCCQjySGTulrWmHtUvPfl647afSwW9b1MbAi0wzOQbNr5LWKGPdCYdS91hDdW/8ENDaKS8YgwXLsA2/iUBw/1+K/2i7pYQoIbive48mO5Hq0mO+DU/QeVXVy5xiUnmR50x6hkwyNX8xOx5i49m/ItiA0OA6Y7W3sXR++6+MMZWQKXiWkfUMHF6faa1ljW62tYz5bQVFfwOO1oPjRH+p1av2xCmRB6xX2Dkwsk="
-  - AWS_DEFAULT_REGION: "us-east-1"
+  - AWS_DEFAULT_REGION: us-west-1
   - S3_PARAMS: '"--acl public-read --cache-control \"public,must-revalidate,proxy-revalidate,max-age=0\""'
-  - JEMALLOC_PARAMS: '"--with-jemalloc-prefix=je_ --disable-stats --disable-fill --disable-cxx --disable-initial-exec-tls"'
-
+  - JEMALLOC_PARAMS: '"--with-jemalloc-prefix=je_ --disable-stats --disable-fill --disable-cxx
+      --disable-initial-exec-tls"'
+  - secure: ZSiquC7ipEpfC0UOWARw3kKAYzAFpnVDVN6AaOT8iPO5+9HQTU6cvj/BBjOahZORxM2V6LhVjn709nVLMhhe6/Ib07x/6zVdWdfu7VKr/a5aZNxTFNLBMQw8D9yGh77ku270+60Hx9oNEColi6012C1clrWFSfENAcOMTnSCaYeWkkQVc/R3FaKN7b9WDp1UzO6/qIdp43b/M27H/p1I87pbe8+EcO53lmTQ8WE6Cdf/hp3eufG4IXhjlhYQbvgXwCwG7bouGSPKy0eESmTc96cJwS0zLHg7Ishyp4wPI38EJn9CEM6BmHr0Evx4sGeLknZGwawf6/rZGz/DUJvfq5xB2Q7vCzf77tU1JWQVMJtA/pqBeREBKif6ETV4sRU6YzGfQY4IDv63fM2JysyxFiDImqpX972ePLFdIpuuXvb5VP3Yi+wb/mMROzIist18Q2AeCTkJ5fcMUv2VHjnf+WtwKCc/QvQHtk7QChYawSBbVr4pPpY32KqPOFXuwzd7hU23G53OYU/aMFZYBR967nmReXM5TxNcS5exebw3yiN/6e9RI5F0ZwhhcTlA3nO2dVQBj8YPbWMRRPQzPiMv6nO5XA7Ky3aHIZ41HJOZbZVqzrW/m1Yqpz6K6dBW9d8Dv2ehXriZsdeH+5+Gq4APUr2MmT6zbm+LY0KB+XzyNV0=
 matrix:
   include:
-
-  # -----------------
-  - name: "Linux x64"
-  # -----------------
+  - name: Linux x64
     dist: xenial
     language: c
     compiler: gcc
-
     addons:
       apt:
         packages:
         - gcc-4.8
-
     before_install:
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
-
     script:
-    - "CC=gcc-4.8 CFLAGS=\"-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0\" LDFLAGS=-Wl,--wrap,memcpy ./autogen.sh $JEMALLOC_PARAMS"
+    - CC=gcc-4.8 CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0" LDFLAGS=-Wl,--wrap,memcpy
+      ./autogen.sh $JEMALLOC_PARAMS
     - make
     - cd lib
     - strip libjemalloc.so
-    - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libjemalloc.so s3://build.lwjgl.org/nightly/linux/x64/libjemalloc.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/x64/libjemalloc.so.git $S3_PARAMS"
-
-  # -----------------
-  - name: "Linux arm32"
-  # -----------------
+    - git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git
+    - aws s3 cp libjemalloc.so s3://lwjgl-mips64/nightly/linux/x64/libjemalloc.so
+      $S3_PARAMS
+    - aws s3 cp revision.git s3://lwjgl-mips64/nightly/linux/x64/libjemalloc.so.git
+      $S3_PARAMS
+  - name: Linux arm32
     dist: xenial
     language: c
     compiler: gcc
-
     addons:
       apt:
         packages:
         - gcc-4.8-arm-linux-gnueabihf
         - libc6-dev-armhf-cross
-
     before_install:
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
-
     script:
-    - "CC=arm-linux-gnueabihf-gcc-4.8 CFLAGS=\"-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0\" ./autogen.sh --host=arm-linux-gnueabihf $JEMALLOC_PARAMS"
+    - CC=arm-linux-gnueabihf-gcc-4.8 CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0"
+      ./autogen.sh --host=arm-linux-gnueabihf $JEMALLOC_PARAMS
     - make
     - cd lib
     - arm-linux-gnueabihf-strip libjemalloc.so
-    - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libjemalloc.so s3://build.lwjgl.org/nightly/linux/arm32/libjemalloc.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/arm32/libjemalloc.so.git $S3_PARAMS"
-
-  # -----------------
-  - name: "Linux arm64"
-  # -----------------
+    - git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git
+    - aws s3 cp libjemalloc.so s3://lwjgl-mips64/nightly/linux/arm32/libjemalloc.so
+      $S3_PARAMS
+    - aws s3 cp revision.git s3://lwjgl-mips64/nightly/linux/arm32/libjemalloc.so.git
+      $S3_PARAMS
+  - name: Linux arm64
     dist: xenial
     language: c
     compiler: gcc
-
     addons:
       apt:
         packages:
         - cmake
         - gcc-4.8-aarch64-linux-gnu
         - libc6-dev-arm64-cross
-
     before_install:
     - pip install --user awscli
     - export PATH=$PATH:$HOME/.local/bin
-
     script:
-    - "CC=aarch64-linux-gnu-gcc-4.8 CFLAGS=\"-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0\" ./autogen.sh --host=aarch64-linux-gnu $JEMALLOC_PARAMS"
+    - CC=aarch64-linux-gnu-gcc-4.8 CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0"
+      ./autogen.sh --host=aarch64-linux-gnu $JEMALLOC_PARAMS
     - make
     - cd lib
     - aarch64-linux-gnu-strip libjemalloc.so
-    - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libjemalloc.so s3://build.lwjgl.org/nightly/linux/arm64/libjemalloc.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/arm64/libjemalloc.so.git $S3_PARAMS"
-
-  # -----------------
-  - name: "macOS"
-  # -----------------
+    - git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git
+    - aws s3 cp libjemalloc.so s3://lwjgl-mips64/nightly/linux/arm64/libjemalloc.so
+      $S3_PARAMS
+    - aws s3 cp revision.git s3://lwjgl-mips64/nightly/linux/arm64/libjemalloc.so.git
+      $S3_PARAMS
+  - name: Linux mips64
+    dist: xenial
+    language: c
+    compiler: gcc
+    addons:
+      apt:
+        packages:
+        - cmake
+        - gcc-5-mips64el-linux-gnuabi64
+        - libc6-dev-mips64el-cross
+    before_install:
+    - pip install --user awscli
+    - export PATH=$PATH:$HOME/.local/bin
+    script:
+    - CC=mips64el-linux-gnuabi64-gcc-5 CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0"
+      ./autogen.sh --host=mips64el-linux-gnuabi64 $JEMALLOC_PARAMS
+    - make
+    - cd lib
+    - mips64el-linux-gnuabi64-strip libjemalloc.so
+    - git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git
+    - aws s3 cp libjemalloc.so s3://lwjgl-mips64/nightly/linux/mips64/libjemalloc.so
+      $S3_PARAMS
+    - aws s3 cp revision.git s3://lwjgl-mips64/nightly/linux/mips64/libjemalloc.so.git
+      $S3_PARAMS
+  - name: macOS
     language: objective-c
     osx_image: xcode11.3
     compiler: clang
-
     before_install:
     - brew update
-
     install:
     - brew install awscli
-
     script:
-    - "./autogen.sh $JEMALLOC_PARAMS --disable-zone-allocator EXTRA_CFLAGS=\"-mmacosx-version-min=10.9\" EXTRA_CXXFLAGS=\"-mmacosx-version-min=10.9\" LDFLAGS=\"-mmacosx-version-min=10.9\""
+    - ./autogen.sh $JEMALLOC_PARAMS --disable-zone-allocator EXTRA_CFLAGS="-mmacosx-version-min=10.9"
+      EXTRA_CXXFLAGS="-mmacosx-version-min=10.9" LDFLAGS="-mmacosx-version-min=10.9"
     - make
     - cd lib
     - strip -u -r libjemalloc.dylib
-    - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libjemalloc.dylib s3://build.lwjgl.org/nightly/macosx/x64/libjemalloc.dylib $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/macosx/x64/libjemalloc.dylib.git $S3_PARAMS"
+    - git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git
+    - aws s3 cp libjemalloc.dylib s3://lwjgl-mips64/nightly/macosx/x64/libjemalloc.dylib
+      $S3_PARAMS
+    - aws s3 cp revision.git s3://lwjgl-mips64/nightly/macosx/x64/libjemalloc.dylib.git
+      $S3_PARAMS
