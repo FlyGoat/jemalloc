@@ -93,7 +93,7 @@ matrix:
     - export PATH=$PATH:$HOME/.local/bin
     script:
     - CC=mips64el-linux-gnuabi64-gcc-5 CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0"
-      ./autogen.sh --host=mips64el-linux-gnuabi64 $JEMALLOC_PARAMS
+      ./autogen.sh --host=mips64el-linux-gnuabi64 --with-lg-page=16 $JEMALLOC_PARAMS
     - make
     - cd lib
     - mips64el-linux-gnuabi64-strip libjemalloc.so
